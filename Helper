@@ -1,0 +1,8 @@
+features:
+  - type: select-options
+type: tile
+entity: input_select.waterpomp
+tap_action:
+  action: none
+icon_tap_action:
+  action: none
