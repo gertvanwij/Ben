@@ -1,0 +1,22 @@
+type: custom:horizon-card
+title: null
+moon: true
+refresh_period: 60
+fields:
+  sunrise: true
+  sunset: true
+  dawn: true
+  noon: true
+  dusk: true
+  azimuth: true
+  sun_azimuth: true
+  moon_azimuth: true
+  elevation: true
+  sun_elevation: true
+  moon_elevation: true
+  moonrise: true
+  moonset: true
+  moon_phase: true
+southern_flip: false
+moon_phase_rotation: -10
+debug_level: 0
