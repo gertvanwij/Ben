@@ -1,0 +1,18 @@
+features:
+  - type: select-options
+type: tile
+entity: input_select.sproeiers_tuin
+tap_action:
+  action: none
+icon_tap_action:
+  action: none
+state_content: state
+color: >-
+  {% if is_state('input_select.sproeiers_tuin', 'Sproeier noord') or
+  is_state('input_select.sproeiers_tuin', 'Sproeier zuid') or
+  is_state('input_select.sproeiers_tuin', 'Sproeier oost') or
+  is_state('input_select.sproeiers_tuin', 'Sproeier gras') %}
+    green
+  {% else %}
+    orange
+  {% endif %}
