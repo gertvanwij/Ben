@@ -1,0 +1,66 @@
+alias: Nieuwe automatisering
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - input_select.waterpomp
+    to: uit
+    id: uit
+  - platform: state
+    entity_id:
+      - input_select.waterpomp
+    to: pomp1
+    id: pomp1
+  - platform: state
+    entity_id:
+      - input_select.waterpomp
+    to: pomp2
+    id: pomp2
+condition: []
+action:
+  - if:
+      - condition: trigger
+        id:
+          - uit
+    then:
+      - service: light.turn_off
+        target:
+          entity_id:
+            - light.lidl_badkamer_klein
+            - light.lidl_badkamer
+        data: {}
+  - if:
+      - condition: trigger
+        id:
+          - pomp1
+    then:
+      - service: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+            - light.lidl_badkamer
+            - light.lidl_badkamer_klein
+      - service: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.lidl_badkamer
+  - if:
+      - condition: trigger
+        id:
+          - pomp2
+    then:
+      - service: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+            - light.lidl_badkamer
+            - light.lidl_badkamer_klein
+      - service: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.lidl_badkamer_klein
+mode: single
