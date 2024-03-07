@@ -12,3 +12,8 @@ informatie
        {% else %}
          orange
        {% endif %} 
+
+
+Dailey sensor
+
+https://github.com/jeroenterheerdt/HADailySensor
