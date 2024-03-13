@@ -25,3 +25,8 @@ Vaatwasser is klaar  blueprint
 https://community.home-assistant.io/t/notify-or-do-something-when-an-appliance-like-a-dishwasher-or-washing-machine-finishes/254841
 
 =============================================================================================================================================================
+
+
+rtsp://testuser:foscam@192.168.1.11:88/videoMain
+
+
