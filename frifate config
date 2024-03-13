@@ -1,7 +1,7 @@
 mqtt:
-  host: 192.168.178.127
-  user: gert
-  password: domoticz
+  host: 192.168.2.118
+  user: home
+  password: Buddy2959
   topic_prefix: frigate
   client_id: frigate
   stats_interval: 60
@@ -14,59 +14,19 @@ logger:
     frigate.record.maintainer: debug
 
 detectors:
-  coral:
-    type: edgetpu
-    device: usb
+#  coral:
+#    type: edgetpu
+#    device: usb
 #  cpu1:
 #    type: cpu
 #    num_threads: 2
 
-#camera voor deurbel buiten   
-cameras:
-  voordeur:    #voordeurbel
-    ffmpeg:
-      inputs:
-        - path: rtsp://admin:Telefoon01.@192.168.178.100:554/h264Preview_01_main
-          input_args: preset-rtsp-restream
-          roles:
-            - record
-        - path: rtsp://admin:Telefoon01.@192.168.178.100:554/h264Preview_01_sub
-          input_args: preset-rtsp-restream
-          roles:
-            - detect
-    detect:
-      width: 640
-      height: 480
-      fps: 5
-    objects:
-      track:
-        - person
-        - cat
-        - dog 
-    snapshots:
-      enabled: True
-      timestamp: False
-      bounding_box: True
-    record:
-      enabled: True
-      retain:
-        days: 0
-        mode: motion
-      events:
-        pre_capture: 30
-        post_capture: 30
-        retain:
-          default: 2
-          mode: active_objects
-    motion:
-      mask:
-        - 0,207,181,207,213,0,0,0
 
-#camera tuin achter buiten   
-  tuin:  
+#camera hek straat   
+   hek:  
     ffmpeg:
       inputs:
-        - path: rtsp://admin:admin@192.168.178.59:8554/Streaming/Channels/101
+        - path: rtsp://Toepoel:Buddy2959@192.168.2.75:8554/Streaming/Channels/101
           input_args: preset-rtsp-restream
           roles:
             - record
@@ -107,171 +67,9 @@ cameras:
           mode: active_objects
     motion:
       mask:
-        - 0,870,130,826,183,756,329,722,542,643,687,580,623,337,525,222,416,133,612,115,622,0,293,0,145,0,104,0,55,0,28,0,0,36
-        - 1920,240,1920,474,1504,476,1522,416,1508,353
+
  
 
- #camera rechts voor buiten       
-  rechts:  
-    ffmpeg:
-      inputs:
-        - path: rtsp://admin:22@straat@192.168.178.86:554/h264Preview_01_main
-          input_args: preset-rtsp-restream
-          roles:
-            - record
-        - path: rtsp://admin:22@straat@192.168.178.86:554/h264Preview_01_sub
-          input_args: preset-rtsp-restream
-          roles:
-            - detect
-    detect:
-      width: 640
-      height: 480
-      fps: 5
-    objects:
-      track:
-        - person
-#        - car     # let op AUTO
-#        - bird
-        - bicycle
-#        - dog
-    snapshots:
-      enabled: True
-      timestamp: False
-      bounding_box: True
-    record:
-      enabled: True
-      retain:
-        days: 0
-        mode: motion
-      events:
-        pre_capture: 30
-        post_capture: 30
-        retain:
-          default: 2
-          mode: active_objects
-
-#camera links voor buiten
-  links:  
-    ffmpeg:
-      inputs:
-        - path: rtsp://admin:22@straat@192.168.178.88:554/h264Preview_01_main
-          input_args: preset-rtsp-restream
-          roles:
-            - record
-        - path: rtsp://admin:22@straat@192.168.178.88:554/h264Preview_01_sub
-          input_args: preset-rtsp-restream
-          roles:
-            - detect
-    detect:
-      width: 640
-      height: 480
-      fps: 5
-    objects:
-      track:
-        - person
-#        - car     # let op AUTO
-#        - bird
-        - bicycle
-#        - dog
-      filters:   
-        person:
-          min_area: 500
-    snapshots:
-      enabled: True
-      timestamp: False
-      bounding_box: True
-    record:
-      enabled: True
-      retain:
-        days: 0
-        mode: motion
-      events:
-        pre_capture: 30
-        post_capture: 30
-        retain:
-          default: 2
-          mode: active_objects
-    motion:
-      mask:
-        - 0,112,347,107,467,0,0,0
-
-#camera gang pzt voor buiten
-  gang:
-    ffmpeg:
-      inputs:
-        - path: "rtsp://gert:22@straat@192.168.178.138:554/videoMain"
-#          input_args: preset-rtsp-restream
-          roles:
-            - record
-            - detect            
-    detect:
-      width: 640
-      height: 480
-      fps: 5
-    objects:
-      track:
-        - person
-        - cat
-    snapshots:
-      enabled: True
-      timestamp: False
-      bounding_box: True
-    record:
-      enabled: True
-      retain:
-        days: 0
-        mode: motion
-      events:
-        pre_capture: 10
-        post_capture: 10
-        retain:
-          default: 2
-          mode: active_objects
-
- #camera binnen 
-  binnen:  
-    ffmpeg:
-      inputs:
-        - path: rtsp://admin:22@straat@192.168.178.111:554/h264Preview_01_main
-          input_args: preset-rtsp-restream
-          roles:
-            - record
-        - path: rtsp://admin:22@straat@192.168.178.111:554/h264Preview_01_sub
-          input_args: preset-rtsp-restream
-          roles:
-            - detect
-    detect:
-      width: 640
-      height: 480
-      fps: 5
-    objects:
-      track:
-        - cat
-        - dog
-    snapshots:
-      enabled: True
-      timestamp: True
-      bounding_box: True
-    record:
-      enabled: True
-      retain:
-        days: 0
-        mode: motion
-      events:
-        pre_capture: 60
-        post_capture: 60
-        retain:
-          default: 2
-          mode: active_objects          
-    onvif:
-      host: 192.168.178.111
-      port: 8000
-      user: admin
-      password: 22@straat
-    motion: 
-      mask:
-        - 169,21,416,127,408,0,283,0,242,0,217,0,152,0
-        - 453,206,479,200,497,192,528,198,474,142,452,140
 telemetry:
   # Optional: Enable the latest version outbound check (default: shown below)
   # NOTE: If you use the HomeAssistant integration, disabling this will prevent it from reporting new versions
