@@ -29,4 +29,6 @@ https://community.home-assistant.io/t/notify-or-do-something-when-an-appliance-l
 
 rtsp://testuser:foscam@192.168.1.11:88/videoMain
 
+rtsp://admin:admin@192.168.1.20:150/videoMain
+
 
