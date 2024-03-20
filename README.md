@@ -20,6 +20,10 @@ https://github.com/jeroenterheerdt/HADailySensor
 
 =============================================================================================================================================================
 
+https://github.com/bigbeartechworld/big-bear-video-assets/tree/main/how-to-install-frigate-on-casa-os
+
+
+
 Vaatwasser is klaar  blueprint
 
 https://community.home-assistant.io/t/notify-or-do-something-when-an-appliance-like-a-dishwasher-or-washing-machine-finishes/254841
