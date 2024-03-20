@@ -1,7 +1,7 @@
 mqtt:
   host: 192.168.2.118
-  user: Home
-  password: Buddy2959
+  user: xx
+  password: xx
   topic_prefix: frigate
   client_id: frigate
   stats_interval: 60
@@ -26,11 +26,11 @@ detectors:
    hek:  
     ffmpeg:
       inputs:
-        - path: rtsp://Toepoel:Buddy2959@192.168.2.75:88/videoMain
+        - path: rtsp://xx:xx@192.168.2.75:88/videoMain
           input_args: preset-rtsp-restream
           roles:
             - record
-        - path: rtsp://Toepoel:Buddy2959@192.168.2.75:88/videoMain
+        - path: rtsp://xx:xx@192.168.2.75:88/videoMain
           input_args: preset-rtsp-restream
           roles:
             - detect
