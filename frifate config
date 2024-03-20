@@ -26,11 +26,11 @@ detectors:
    hek:  
     ffmpeg:
       inputs:
-        - path: rtsp://xxxxx:xxxxx@192.168.2.75:8554/Streaming/Channels/101
+        - path: rtsp://Toepoel:Buddy2959@192.168.2.75:88/videoMain
           input_args: preset-rtsp-restream
           roles:
             - record
-        - path: rtsp://xxxxx:xxxxx@192.168.178.59:8554/Streaming/Channels/102
+        - path: rtsp://Toepoel:Buddy2959@192.168.2.75:88/videoMain
           input_args: preset-rtsp-restream
           roles:
             - detect
