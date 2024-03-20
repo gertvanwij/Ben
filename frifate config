@@ -68,7 +68,7 @@ detectors:
     motion:
       mask:
 
- 
+#/DATA/AppData/frigate/config
 
 telemetry:
   # Optional: Enable the latest version outbound check (default: shown below)
