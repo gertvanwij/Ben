@@ -1,7 +1,7 @@
 mqtt:
   host: 192.168.2.118
-  user: xxxx
-  password: xxxxxxx
+  user: Home
+  password: Buddy2959
   topic_prefix: frigate
   client_id: frigate
   stats_interval: 60
