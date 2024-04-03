@@ -20,7 +20,7 @@ https://github.com/jeroenterheerdt/HADailySensor
 
 =============================================================================================================================================================
 
-/dev/sdb2: UUID="62964b68-f460-42c8-ad58-f1bf74ddad22" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f1218d67-02"
+
 
 
 https://github.com/bigbeartechworld/big-bear-video-assets/tree/main/how-to-install-frigate-on-casa-os
@@ -41,3 +41,6 @@ rtsp://admin:admin@192.168.1.20:150/videoMain
 https://www.ispyconnect.com/camera/foscam
 
 https://docs.frigate.video/configuration/camera_specific/#mjpeg-cameras
+========================================================================================================================
+/dev/sdb2: UUID="62964b68-f460-42c8-ad58-f1bf74ddad22" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f1218d67-02"
+/mnt/camera/frigate
