@@ -44,3 +44,7 @@ https://docs.frigate.video/configuration/camera_specific/#mjpeg-cameras
 ========================================================================================================================
 /dev/sdb2: UUID="62964b68-f460-42c8-ad58-f1bf74ddad22" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f1218d67-02"
 /mnt/camera/frigate
+
+
+===============================================================================================================================
+https://community.bigbeartechworld.com/t/how-to-migrate-casaos-data-to-a-new-drive-and-mount-it-permanently/217
