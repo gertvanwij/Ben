@@ -1,0 +1,14 @@
+
+homeassistant 
+configuration yaml
+
+influxdb:
+  api_version: 2
+  host: 192.168.178.112
+  ssl: false
+  port: 8092
+  token: UDVeyXeeE_zXaWv9zrhfu.................................................
+  organization: home
+  bucket: hadata
+
+
