@@ -11,4 +11,57 @@ influxdb:
   organization: home
   bucket: hadata
 
+GRAFANA Connection influxdb
 
+HTTP
+URL
+http://192.168.178.112:8092
+Allowed cookies
+New tag (enter key to add)
+
+Add
+Timeout
+Timeout in seconds
+Auth
+Basic auth
+
+With Credentials
+
+TLS Client Auth
+
+With CA Cert
+
+Skip TLS Verify
+
+Forward OAuth Identity
+
+Basic Auth Details
+User
+gert
+Password
+configured
+
+Reset
+Custom HTTP Headers
+
+Add header
+
+InfluxDB Details
+Organization
+home
+Token
+configured
+
+Reset
+Default Bucket
+hadata
+Min time interval
+10s
+Max series
+1000
+datasource is working. 4 buckets found
+Next, you can start to visualize data by building a dashboard, or by querying data in the Explore view.
+
+Delete
+
+Save & test
