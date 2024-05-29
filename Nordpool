@@ -38,7 +38,7 @@ span:
   start: day
   offset: +0h
 series:
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     type: column
     color: green
     float_precision: 4
@@ -52,7 +52,7 @@ series:
       return entity.attributes.raw_today.map((start, index) => {
         return [new Date(start["start"]).getTime(), entity.attributes.raw_today[index]["value"]];
       });
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     type: column
     color: yellow
     float_precision: 4
@@ -68,14 +68,14 @@ series:
         return [new Date(start["start"]).getTime(), entity.attributes.raw_tomorrow[index]["value"]];
 
       });
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     name: nu
     color: green
     type: column
     show:
       in_chart: false
     float_precision: 4
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     attribute: average
     type: column
     color: pink
@@ -87,7 +87,7 @@ series:
     show:
       in_chart: false
       legend_value: false
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     attribute: max
     type: column
     color: orange
@@ -99,7 +99,7 @@ series:
     show:
       in_chart: false
       legend_value: false
-  - entity: sensor.nordpool_kwh_nl_eur_3_10_21
+  - entity: sensor.nordpool_kwh_nl_eur_3_10_021
     attribute: min
     type: column
     color: green
