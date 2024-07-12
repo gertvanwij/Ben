@@ -1,0 +1,14 @@
+
+in configuration.yaml
+
+rest_command:
+  led_on:
+    url: "http://192.168.178.53/control?cmd=event,led_on"
+  led_off:
+    url: "http://192.168.178.53/control?cmd=event,led_off"
+
+
+script
+
+service: rest_command.led_off
+data: {}
