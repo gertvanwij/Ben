@@ -43,6 +43,11 @@ https://www.ispyconnect.com/camera/foscam
 https://docs.frigate.video/configuration/camera_specific/#mjpeg-cameras
 ========================================================================================================================
 /dev/sdb2: UUID="62964b68-f460-42c8-ad58-f1bf74ddad22" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="f1218d67-02"
+
+
+
+3 uur goedkope stroom
+https://www.creatingsmarthome.com/index.php/2023/04/12/home-assistant-advanced-nord-pool-cheapest-hours-with-local-calendar-support/?fbclid=IwY2xjawD0TKVleHRuA2FlbQIxMQABHfXD4-cueghA4V--F-4DIrtGfTY4YxfzsBblfJ8ODgcdZyM7vnV6kXtbzQ_aem_L4Ex7xpMrNqzHWsV9OzQhg&sfnsn=mo
 /mnt/camera/frigate
 
 
