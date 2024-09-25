@@ -1,0 +1,9 @@
+action: notify.mobile_app_alarmo_toetsenbord
+
+data:
+        message: “Your Roommate arrived”
+        data:
+          push:
+            sound: "US-EN-Morgan-Freeman-Vacate-The-Premises.wav"
+
+            #US-EN-Morgan-Freeman-Welcome-Home.wav  US-EN-Morgan-Freeman-Vacate-The-Premises.wav
