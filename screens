@@ -1,41 +1,39 @@
 
 trigger is helper screen auto
 
-automatisering = screen auto
+automatisering:
+  screen auto omlaag
+  screen auto omhoog
 
 triggers
-windsnelheid < 15 kmu
-regen < q,1
-temp > 24 C
-lux > 56000        sensor licht?
-uv index > 4.45
+  windsnelheid < 15 kmu
+  regen < q,1
+  temp > 24 C
+  lux > 56000        sensor licht?
+  uv index > 4.45
 
 voorwaarde
-knop aan
-rest triggers
-screen omhoog
+  knop aan
+  screen omhoog
 
-dan
-screens omlaag
-
+aktie
+  screens omlaag
 
 =======================
 
-
-
-omhoog:
 voorwaarde
-helper aanstaan
-screens omlaag
+  helper aanstaan
+  screens omlaag
 
 trigger
-windsnelheid > 15 kmu
-regen > q
-temp < 24 C
-lux < 56000
+  windsnelheid > 15 kmu
+  regen > q
+  temp < 24 C
+  lux < 56000
 
-omhoog
-helper uit
-wachttijd 15 min
-helper aan
+aktie
+  screen omhoog
+  helper uit
+  wachttijd 15 min
+  helper aan
 
