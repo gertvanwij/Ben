@@ -1,0 +1,41 @@
+
+trigger is helper screen auto
+
+automatisering = screen auto
+
+triggers
+windsnelheid < 15 kmu
+regen < q,1
+temp > 24 C
+lux > 56000        sensor licht?
+uv index > 4.45
+
+voorwaarde
+knop aan
+rest triggers
+screen omhoog
+
+dan
+screens omlaag
+
+
+=======================
+
+
+
+omhoog:
+voorwaarde
+helper aanstaan
+screens omlaag
+
+trigger
+windsnelheid > 15 kmu
+regen > q
+temp < 24 C
+lux < 56000
+
+omhoog
+helper uit
+wachttijd 
+helper aan
+
