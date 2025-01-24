@@ -1,6 +1,18 @@
 # Ben
 informatie
 
+sensor windrichting
+in de sensor.yaml een nieuwe sensor maken volgens 
+![image](https://github.com/user-attachments/assets/9b8c0fd4-d18b-43cc-a218-eb66c9763f8f)
+
+deze sensor dan gebruiken in de windroos
+
+
+
+
+
+
+
 ![image](https://github.com/gertvanwij/Ben/assets/65614247/4e85d320-313a-4784-b3bc-09ff509c4aef)
 
 
