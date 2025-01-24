@@ -2,7 +2,8 @@
 informatie
 
 sensor windrichting
-in de sensor.yaml een nieuwe sensor maken volgens 
+
+in de file sensor.yaml een nieuwe sensor maken volgens 
 ![image](https://github.com/user-attachments/assets/9b8c0fd4-d18b-43cc-a218-eb66c9763f8f)
 
 LET OP!
