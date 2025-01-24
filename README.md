@@ -5,11 +5,23 @@ sensor windrichting
 in de sensor.yaml een nieuwe sensor maken volgens 
 ![image](https://github.com/user-attachments/assets/9b8c0fd4-d18b-43cc-a218-eb66c9763f8f)
 
-deze sensor dan gebruiken in de windroos
+LET OP!
+waarschijnkijk staat er al helemaal boven aan in sensor.yaml
 
+- platform: template
+  sensors:
 
+dan alleen dit gebruiken
 
+    windnaam:
+      value_template: >
+        {% set direction = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW','N'] %}
+        {% set degree = states('sensor.windrichting_azimut')|float %}
+        {{ direction[((degree+11.25)/22.5)|int] }}
 
+deze sensor (windnaam) dan gebruiken in de windroos
+
+=============================================================================================================================================
 
 
 
