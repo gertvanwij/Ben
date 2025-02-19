@@ -1,5 +1,10 @@
 
 
+https://espeasy.readthedocs.io/en/latest/Plugin/P118.html
+
+
+=================================
+
 esphome:
   name: fancontrol
   platform: ESP8266
