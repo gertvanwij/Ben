@@ -33,6 +33,37 @@ esp32_camera_web_server:
         - path: http://192.168.178.141:8080
           roles:
             - detect
+    record:
+      enabled: false
+
+
+
+
+go2rtc
+
+    tuin:
+      - rtsp://admin:admin@192.168.178.59:8554/Streaming/Channels/101
+    tuin_sub:
+      - rtsp://admin:admin@192.168.178.59:8554/Streaming/Channels/102
       input_args: preset-http-mjpeg-generic
     record:
       enabled: false
+
+
+camera
+
+
+  tuin:
+    ffmpeg:
+      inputs:
+        - path: rtsp://192.168.178.189:8554/tuin
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+        - path: rtsp://192.168.178.189:8554/tuin_sub
+          input_args: preset-rtsp-restream
+          roles:
+            - detect
+    record:
+      enabled: false
+    motion:
