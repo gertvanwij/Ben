@@ -77,9 +77,20 @@ pcf8574:
 sensor:
   - platform: dallas_temp
     address: 0x1234567812345628
-    name: temperature
+    name: "temperature"
     update_interval: 120s
-    one_wire_id: one_wire1    
+    one_wire_id: one_wire1
+
+- platform: dht
+  model: DHT22
+  one_wire_id: one_wire2
+  temperature:
+    name: "Temperature3"
+  humidity:
+    name: "Humidity3"
+  update_interval: 30s
+
+
 
 binary_sensor:
   #- platform: gpio
