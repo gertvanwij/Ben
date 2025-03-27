@@ -1,0 +1,98 @@
+esphome:
+  name: kincony-a16
+  friendly_name: Kincony A16
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "nVv3wKF/OI2CN+c/rJwKvr6aajB+jc5pvWJSQbNwzNk="
+
+# One wire sensors
+one_wire:
+  - platform: gpio
+    pin: GPIO32
+    id: one_wire1
+  - platform: gpio
+    pin: GPIO33
+    id: one_wire2
+  - platform: gpio
+    pin: GPIO14
+    id: one_wire3
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+
+uart:
+  - id: rs485
+    tx_pin: GPIO13
+    rx_pin: GPIO16
+    baud_rate: 9600
+
+remote_receiver:
+  pin:
+    number: GPIO2
+    ignore_strapping_warning: true
+
+remote_transmitter:
+  pin:
+    number: GPIO15
+    ignore_strapping_warning: true
+  carrier_duty_percent: 100%
+
+i2c:
+  sda: GPIO4
+  scl:
+    number: GPIO5
+    ignore_strapping_warning: true
+
+pcf8574:
+  - id: inputs_1_8
+    address: 0x22
+    pcf8575: false
+  - id: inputs_9_16
+    address: 0x21
+    pcf8575: false
+  - id: outputs_1_8
+    address: 0x24
+    pcf8575: false
+  - id: outputs_9_16
+    address: 0x25
+    pcf8575: false
+
+# Sensors
+sensor:
+  - platform: dallas_temp
+    address: 0x28XXXXXXXXXXXXXXXX # Replace with your actual address
+    name: "temperature"
+    update_interval: 120s
+    one_wire_id: one_wire1
+
+  - platform: dht # Corrected platform
+    model: DHT22
+    pin: GPIO0 # Replace with the correct GPIO pin
+    temperature:
+      name: "Temperature3"
+    humidity:
+      name: "Humidity3"
+    update_interval: 30s
+
+binary_sensor:
+  # ... (binary sensor configurations)
+
+switch:
+  # ... (switch configurations)
+
+web_server:
+  port: 80
