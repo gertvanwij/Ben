@@ -1,0 +1,17 @@
+mkdir usb  # beter in de map mnt
+
+lsblk
+
+sudo blkid /dev/sdb1
+
+ab471a8d-214d-408d-bdc1-ce1f04c3582d
+
+sudo nano /etc/fstab
+
+UUID=ab471a8d-214d-408d-bdc1-ce1f04c3582d       /home/gert/usb  ext4    defaults        0       0
+beter
+UUID=ab471a8d-214d-408d-bdc1-ce1f04c3582d       /mnt/usb  ext4    defaults        0       0
+
+sudo reboot
+
+sudo chown -R gert:gert /home/gert/usb
