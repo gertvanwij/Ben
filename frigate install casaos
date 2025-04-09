@@ -1,5 +1,14 @@
 #https://pimylifeup.com/raspberry-pi-casaos/
+============================================================================= install raspbian headless
+sudo apt update
+sudo apt upgrade -y
+sudo apt install curl
+curl -fsSL https://get.casaos.io | sudo bash
 
+ipadres opzoeken
+hostname -I
+
+==============================================================================
 version: "3.9"
 
 services:
