@@ -1,0 +1,14 @@
+# Pay attention, if you use the Z2M addon for HA, it is better to edit Z2M addon yaml configuration file directly (Select the 3 dot menu in the upper right corner → "Edit in YAML")
+serial:
+# Location of SLZB-06
+  port: tcp://192.168.000.000:6638
+  baudrate: 115200
+  adapter: zstack
+# Disable green led?
+  disable_led: false
+# Set output power to max 20
+advanced:
+  transmit_power: 20
+
+EEEID copie van oude
+
