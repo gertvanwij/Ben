@@ -1,0 +1,5 @@
+{% if is_state('light.smart_rgb_bulb_2403120789321952050348e1e9efd4fb', 'on') %}
+  red
+{% else %}
+  orange
+{% endif %}
